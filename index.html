@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Secret Mission 💗 | Dr. Afifa</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Poppins:wght@400;500;600;700&display=swap');
+
+*{box-sizing:border-box}
+body{
+  margin:0;font-family:Poppins,sans-serif;color:#85345e;
+  background:linear-gradient(135deg,#ffe5ef,#fff6fa,#ffd1e3);
+  min-height:100vh;overflow-x:hidden
+}
+header{
+  text-align:center;padding:17px;background:#ffffffa8;
+  border-bottom:1px solid #f8c2d7;font-size:13px
+}
+header strong{color:#c32c73}
+main{max-width:650px;margin:25px auto;padding:12px}
+.page{
+  display:none;min-height:570px;padding:35px 23px;
+  background:#fffafce8;border:1px solid #f6bfd5;
+  border-radius:25px;text-align:center;
+  box-shadow:0 15px 45px #c64a7b20;
+  animation:appear .5s ease
+}
+.page.active{display:flex;flex-direction:column;justify-content:center;align-items:center}
+@keyframes appear{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+h1,h2{font-family:"Playfair Display",serif;color:#a52b68}
+h1{font-size:clamp(44px,10vw,72px);line-height:1.05;margin:12px 0}
+h1 em,h2 em{color:#ec4b91}
+h2{font-size:34px;margin:12px 0 20px}
+p{line-height:1.85;font-size:14px}
+.eyebrow{font-size:10px;letter-spacing:3px;color:#c34d83;font-weight:bold}
+.big-icon{font-size:45px;margin:8px}
+.btn{
+  border:0;border-radius:30px;padding:13px 23px;margin:8px 4px;
+  color:white;background:linear-gradient(110deg,#f66aa5,#d92e79);
+  box-shadow:0 6px 18px #df4c8c30;font-weight:600;cursor:pointer;
+  transition:.2s;font-family:inherit
+}
+.btn:hover{transform:translateY(-2px)}
+.btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+.answers{display:grid;gap:10px;width:100%;max-width:420px;margin:12px auto}
+.answer{
+  border:1px solid #efb7d0;background:#fff6fa;border-radius:12px;
+  padding:12px;text-align:left;color:#81375d;cursor:pointer;font-family:inherit
+}
+.answer:hover{background:#ffe7f1}
+.answer.correct{background:#e5f8ee;border-color:#59b88c;color:#176c4a}
+.answer.wrong{background:#fff0f1;border-color:#e66b89;color:#b12850}
+.feedback{min-height:40px;font-size:12px;font-weight:600}
+.good{color:#16865c}.bad{color:#cf345d}
+.hint{border:0;background:transparent;color:#b43e79;cursor:pointer;font-family:inherit}
+.paper{background:#fff8f0;border:1px solid #f2c1d4;padding:22px;border-radius:15px;text-align:left}
+.signature{font-family:"Playfair Display",serif;font-style:italic;text-align:right;color:#bd3678}
+.heart{position:fixed;bottom:-30px;pointer-events:none;z-index:5;animation:floatUp 7s linear forwards}
+@keyframes floatUp{to{transform:translateY(-110vh) rotate(35deg);opacity:0}}
+footer{text-align:center;font-size:11px;padding:20px;color:#b77899}
+.bouquet{font-size:48px;line-height:1.45;max-width:350px;margin:15px auto}
+.rose{display:inline-block;animation:sway 2s ease-in-out infinite alternate}
+@keyframes sway{to{transform:rotate(9deg) scale(1.08)}}
+.final{
+  background:radial-gradient(circle,#63264e,#21132c);color:white
+}
+.final h2,.final p{color:#ffe6f3}
+.heart-frame{font-size:75px;color:#ff6baa;text-shadow:0 0 22px #ff6baa;animation:pulse 1.5s infinite}
+@keyframes pulse{50%{transform:scale(1.1)}}
+#music{position:fixed;right:12px;top:12px;border:1px solid #f2b9d1;background:#fff8fb;color:#b42c70;border-radius:50%;width:40px;height:40px;cursor:pointer}
+@media(max-width:480px){
+ main{margin:12px auto;padding:8px}
+ .page{min-height:570px;padding:28px 17px}
+ h2{font-size:29px}
+ p{font-size:13px}
+}
+</style>
+</head>
+
+<body>
+<header>♡ A little secret mission for <strong>Dr. Afifa Shahid</strong> ♡</header>
+<button id="music" title="Toggle gentle music">♫</button>
+
+<main>
+
+<section class="page active" id="welcome">
+  <div class="big-icon">💌</div>
+  <p class="eyebrow">A SPECIAL ADVENTURE</p>
+  <h1>The <em>Secret</em><br>Mission</h1>
+  <p>Riddles, surprises, roses, and a little bit of magic await you.</p>
+  <p>Are you ready, my princess? 💗</p>
+  <button class="btn" onclick="go('letter')">Start Mission →</button>
+</section>
+
+<section class="page" id="letter">
+  <div class="big-icon">🔐</div>
+  <p class="eyebrow">TOP SECRET</p>
+  <h2>Dear Dr. Afifa,</h2>
+  <div class="paper">
+    <p>This little website was created especially for you. 💕</p>
+    <p>Your mission is to solve riddles, answer tricky questions, and unlock a special surprise.</p>
+    <p>Take your time, enjoy every page, and remember that you deserve plenty of happiness and smiles.</p>
+    <p class="signature">Your secret mission begins now… ♥</p>
+  </div>
+  <button class="btn" onclick="go('riddle1')">Accept Mission →</button>
+</section>
+
+<section class="page" id="riddle1">
+  <div class="big-icon">🧩</div>
+  <p class="eyebrow">CHALLENGE 01</p>
+  <h2>Riddle Time</h2>
+  <p>I have keys but open no locks.<br>
+  I have space but no room.<br>
+  You can enter, but can't go inside.<br><strong>What am I?</strong></p>
+  <div class="answers" id="answers1">
+    <button class="answer" onclick="check(this,false,'f1')">A. A clock</button>
+    <button class="answer" onclick="check(this,true,'f1')">B. A keyboard</button>
+    <button class="answer" onclick="check(this,false,'f1')">C. A map</button>
+    <button class="answer" onclick="check(this,false,'f1')">D. A book</button>
+  </div>
+  <p class="feedback" id="f1"></p>
+  <button class="hint" onclick="hint('f1','Hint: You use it to type messages!')">💡 Need a hint?</button>
+  <button class="btn" id="n1" disabled onclick="go('quiz')">Next Challenge →</button>
+</section>
+
+<section class="page" id="quiz">
+  <div class="big-icon">🌎</div>
+  <p class="eyebrow">CHALLENGE 02</p>
+  <h2>Quick Quiz</h2>
+  <p>Which planet is known as the <strong>Red Planet</strong>?</p>
+  <div class="answers">
+    <button class="answer" onclick="check(this,false,'f2')">A. Earth</button>
+    <button class="answer" onclick="check(this,true,'f2')">B. Mars</button>
+    <button class="answer" onclick="check(this,false,'f2')">C. Jupiter</button>
+    <button class="answer" onclick="check(this,false,'f2')">D. Venus</button>
+  </div>
+  <p class="feedback" id="f2"></p>
+  <button class="hint" onclick="hint('f2','Hint: Its name begins with M!')">💡 Give me a clue</button>
+  <button class="btn" id="n2" disabled onclick="go('riddle2')">Next Challenge →</button>
+</section>
+
+<section class="page" id="riddle2">
+  <div class="big-icon">🔥</div>
+  <p class="eyebrow">CHALLENGE 03</p>
+  <h2>One Last Riddle</h2>
+  <p>I'm not alive, but I can grow.<br>
+  I need air, but have no lungs.<br>
+  Water can stop me.<br><strong>What am I?</strong></p>
+  <div class="answers">
+    <button class="answer" onclick="check(this,false,'f3')">A. A tree</button>
+    <button class="answer" onclick="check(this,true,'f3')">B. A fire</button>
+    <button class="answer" onclick="check(this,false,'f3')">C. A cloud</button>
+    <button class="answer" onclick="check(this,false,'f3')">D. A star</button>
+  </div>
+  <p class="feedback" id="f3"></p>
+  <button class="hint" onclick="hint('f3','Hint: It gives off heat and light!')">💡 Hint, please</button>
+  <button class="btn" id="n3" disabled onclick="go('roses')">Unlock Surprise →</button>
+</section>
+
+<section class="page" id="roses">
+  <div class="big-icon">🌷</div>
+  <p class="eyebrow">SURPRISE UNLOCKED</p>
+  <h2>A Bouquet for You</h2>
+  <p>Just like these roses, you make ordinary moments feel more beautiful. 🌹</p>
+  <div class="bouquet" id="bouquet">
+    🌹 🌹 🌹<br>
+    🌹 💐 🌹<br>
+    🌿 🌷 🌿
+  </div>
+  <button class="btn" onclick="bloom()">Make Roses Bloom ✨</button>
+  <button class="btn" onclick="go('message')">Your Special Message →</button>
+  <p class="feedback" id="bloomText"></p>
+</section>
+
+<section class="page" id="message">
+  <div class="big-icon">💗</div>
+  <p class="eyebrow">A NOTE FROM THE HEART</p>
+  <h2>Dr. Afifa Shahid</h2>
+  <div class="paper">
+    <p>You deserve kindness, peace, laughter, and all the little things that make life lovely.</p>
+    <p>I hope this tiny adventure brings a smile to your face and reminds you how special you are.</p>
+    <p>Keep shining in your own beautiful way. The world needs more kindness, warmth, and happiness like yours. ✨</p>
+    <p class="signature">With lots of warm wishes, ♥<br>Your secret admirer</p>
+  </div>
+  <button class="btn" onclick="go('finale')">Open Final Surprise →</button>
+</section>
+
+<section class="page final" id="finale">
+  <div class="big-icon">👑</div>
+  <p class="eyebrow">MISSION COMPLETE</p>
+  <h2>Surprise, <em>Dr. Afifa!</em></h2>
+  <p>You solved the riddles and completed your secret mission!</p>
+  <div class="heart-frame">♡</div>
+  <p>You are a ray of sunshine.<br>May life bring you beautiful moments,<br>peace, and countless reasons to smile. 💖</p>
+  <button class="btn" onclick="go('home')">One Last Surprise →</button>
+</section>
+
+<section class="page" id="home">
+  <div class="big-icon">♕</div>
+  <p class="eyebrow">ALWAYS REMEMBER</p>
+  <h1>Dream Big,<br><em>My Princess</em></h1>
+  <p>The world is brighter with your smile in it.</p>
+  <p>You are special, you are enough, and you deserve happiness. 💕</p>
+  <button class="btn" onclick="replay()">↻ Play Mission Again</button>
+</section>
+
+</main>
+
+<footer>Made with ♡ especially for Dr. Afifa Shahid</footer>
+
+<script>
+const pageIds=['welcome','letter','riddle1','quiz','riddle2','roses','message','finale','home'];
+const solved={f1:false,f2:false,f3:false};
+
+function go(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  if(id==='finale') burst(20);
+}
+
+function check(button,correct,feedbackId){
+  if(solved[feedbackId])return;
+  const feedback=document.getElementById(feedbackId);
+  const group=button.parentElement;
+  group.querySelectorAll('.answer').forEach(b=>b.classList.remove('correct','wrong'));
+  button.classList.add(correct?'correct':'wrong');
+
+  if(correct){
+    solved[feedbackId]=true;
+    group.querySelectorAll('.answer').forEach(b=>b.disabled=true);
+    feedback.className='feedback good';
+    const messages={
+      f1:'Correct! ⌨️ A keyboard has keys, a space bar, and an Enter key!',
+      f2:'Correct! 🔴 Mars is called the Red Planet.',
+      f3:'You got it! 🔥 Fire needs oxygen and can be put out with water.'
+    };
+    feedback.textContent=messages[feedbackId];
+    const next={f1:'n1',f2:'n2',f3:'n3'}[feedbackId];
+    document.getElementById(next).disabled=false;
+    burst(5);
+  }else{
+    feedback.className='feedback bad';
+    feedback.textContent='Oops, not quite! 💗 Try another answer. You can do it!';
+  }
+}
+
+function hint(id,message){
+  const el=document.getElementById(id);
+  el.className='feedback';
+  el.textContent=message;
+}
+function bloom(){
+  const bouquet=document.getElementById('bouquet');
+  bouquet.style.transform='scale(1.12)';
+  setTimeout(()=>bouquet.style.transform='scale(1)',350);
+  document.getElementById('bloomText').textContent='A little bouquet, made just for you! 🌹💗';
+  burst(10);
+}
+function heart(){
+  const h=document.createElement('span');
+  h.className='heart';
+  h.textContent=Math.random()>.4?'♥':'♡';
+  h.style.left=Math.random()*100+'%';
+  h.style.fontSize=(14+Math.random()*23)+'px';
+  h.style.color=['#ed4f91','#f7a1c4','#c45eaa'][Math.floor(Math.random()*3)];
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),7200);
+}
+setInterval(heart,700);
+function burst(n){for(let i=0;i<n;i++)setTimeout(heart,i*90)}
+function replay(){
+  Object.keys(solved).forEach(k=>solved[k]=false);
+  document.querySelectorAll('.answer').forEach(b=>{
+    b.disabled=false;b.classList.remove('correct','wrong');
+  });
+  ['f1','f2','f3'].forEach(id=>{
+    const f=document.getElementById(id);f.textContent='';f.className='feedback';
+  });
+  ['n1','n2','n3'].forEach(id=>document.getElementById(id).disabled=true);
+  document.getElementById('bloomText').textContent='';
+  go('welcome');
+}
+
+// Gentle optional synthesized melody; tap the music button to start/stop.
+let audioCtx=null,musicOn=false,musicTimer=null,noteIndex=0;
+const musicBtn=document.getElementById('music');
+musicBtn.addEventListener('click',async()=>{
+  musicOn=!musicOn;
+  musicBtn.textContent=musicOn?'♫♪':'♫';
+  if(!musicOn){clearTimeout(musicTimer);return;}
+  try{
+    const AC=window.AudioContext||window.webkitAudioContext;
+    if(!AC)throw new Error('No audio support');
+    audioCtx=audioCtx||new AC();
+    await audioCtx.resume();
+    playNote();
+  }catch(e){
+    musicOn=false;musicBtn.textContent='♫';
+    alert('Music is unavailable in this browser, but the mission still works!');
+  }
+});
+function playNote(){
+  if(!musicOn||!audioCtx)return;
+  const notes=[523.25,659.25,783.99,659.25,587.33,698.46,880,698.46];
+  const osc=audioCtx.createOscillator(),gain=audioCtx.createGain();
+  osc.type='sine';osc.frequency.value=notes[noteIndex++%notes.length];
+  gain.gain.setValueAtTime(.0001,audioCtx.currentTime);
+  gain.gain.exponentialRampToValueAtTime(.025,audioCtx.currentTime+.06);
+  gain.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+.4);
+  osc.connect(gain);gain.connect(audioCtx.destination);
+  osc.start();osc.stop(audioCtx.currentTime+.42);
+  musicTimer=setTimeout(playNote,520);
+}
+</script>
+</body>
+</html>
